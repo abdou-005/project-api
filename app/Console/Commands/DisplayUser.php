@@ -56,13 +56,5 @@ class DisplayUser extends Command
         }else{
             $this->error('Something went wrong! verifier NAME OR PASSWORD');
         }
-//        if ($this->confirm('Do you wish to continue? [y|N]')) {
-//            $user = $this->argument('name');
-//            $users = User::where('name', '=', $user)->get();
-//            foreach($users as $user){
-//                $this->info('user = '.$user);
-//            }
-//        }
-
     }
 }
