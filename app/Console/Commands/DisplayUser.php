@@ -46,7 +46,7 @@ class DisplayUser extends Command
             $headers = ['Name', 'Email','password'];
             if(count($users) > 0){
                 $this->table($headers, $users);
-//                foreach($users as $user){
+            //foreach($users as $user){
 //                    $this->info('user = '.$user);
 //                }
             }else{
