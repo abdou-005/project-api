@@ -38,6 +38,31 @@ class DisplayUser extends Command
      */
     public function handle()
     {
-        User::where('name',)
+        $name = $this->ask('What is your name?');
+        $password = $this->secret('What is the password?');
+        if( $name == 'abdou' && $password == '123456'){
+            $user = $this->argument('name');
+            $users = User::all(['name','email','password']);
+            $headers = ['Name', 'Email','password'];
+            if(count($users) > 0){
+                $this->table($headers, $users);
+//                foreach($users as $user){
+//                    $this->info('user = '.$user);
+//                }
+            }else{
+                $this->line('Not user');
+
+            }
+        }else{
+            $this->error('Something went wrong! verifier NAME OR PASSWORD');
+        }
+//        if ($this->confirm('Do you wish to continue? [y|N]')) {
+//            $user = $this->argument('name');
+//            $users = User::where('name', '=', $user)->get();
+//            foreach($users as $user){
+//                $this->info('user = '.$user);
+//            }
+//        }
+
     }
 }
