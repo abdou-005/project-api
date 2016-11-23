@@ -23,8 +23,8 @@ $api->version('v1', function ($api) {
     $api->post('authenticate', 'App\Http\Controllers\Auth\AuthController@authenticate');
     $api->get('getauthuser', 'App\Http\Controllers\Auth\AuthController@getAuthenticatedUser');
     $api->get('token', 'App\Http\Controllers\Auth\AuthController@getToken');
-    //$api->resource('users', 'App\Http\Controllers\UserController');
-    //$api->resource('biens', 'App\Http\Controllers\BienController');
+    $api->resource('users', 'App\Http\Controllers\UserController');
+    $api->resource('biens', 'App\Http\Controllers\BienController');
 });
 
 //$api->version('v1',['middleware' => 'jwt.auth'], function ($api) {
