@@ -48,7 +48,6 @@ class DisplayUser extends Command
                 $this->table($headers, $users);
             }else{
                 $this->line('Not user');
-
             }
         }else{
             $this->error('Something went wrong! verifier NAME OR PASSWORD');
