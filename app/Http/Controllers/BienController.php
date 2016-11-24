@@ -13,7 +13,7 @@ class BienController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('jwt.auth');
+       // $this->middleware('jwt.auth');
     }
 
     /**
@@ -33,7 +33,7 @@ class BienController extends Controller
      */
     public function create()
     {
-
+        return true;
     }
 
     /**
