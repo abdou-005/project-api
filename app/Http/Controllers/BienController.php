@@ -34,7 +34,6 @@ class BienController extends Controller
     public function create()
     {
          return Bien::all();
-
     }
 
     /**
