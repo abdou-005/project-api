@@ -33,7 +33,12 @@ class BienController extends Controller
      */
     public function create()
     {
-         return Bien::all();
+
+          $biens = Bien::all();
+        foreach($biens as $bien){
+
+        }
+
     }
 
     /**
@@ -45,6 +50,7 @@ class BienController extends Controller
     public function store(Request $request)
     {
         return Bien::create($request->all());
+        //bn,bn,bnk;nb
     }
 
     /**
