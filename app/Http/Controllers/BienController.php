@@ -33,7 +33,8 @@ class BienController extends Controller
      */
     public function create()
     {
-        return true;
+         return Bien::all();
+
     }
 
     /**
@@ -57,7 +58,7 @@ class BienController extends Controller
     {
         $user = Bien::findOrFail($id);
         return $this->response->item($user, new BienTransformer())->setStatusCode(200);
-        //return $this->response->array($user->toArray());
+        //urn $this->response->array($user->toArray());
     }
 
     /**
